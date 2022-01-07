@@ -1,3 +1,5 @@
+module.exports = Phrase
+
 
 // Adds reverse to all strings
 function reverse(content) {
