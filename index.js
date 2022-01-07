@@ -1,12 +1,21 @@
+
+// Adds reverse to all strings
 function reverse(content) {
- return Array.from(content).reverse().join("")
+ return Array.from(content).reverse().join("");
 }
 
-
-function palindrome(content) {
+// Define a Phrase Object 
+function Phrase(content){
  this.content = content;
 
- let processedContent = this.content.toLowerCase()
- return processedContent === reverse(processedContent)
+ // returns content processed for palindrome
+ this.processedContent = function processedContent() {
+  return this.content.toLowerCase();
+ }
 
+ // return true if the phrase is a plaindrome and false if otherwise
+ this.palindrome = function palindrome() {
+  return this.processedContent === reverse(this.processedContent);
+ }
 }
+
