@@ -14,7 +14,11 @@ function Phrase(content){
  // returns content for letters 
  this.letters = function letters() {
   // this uses functional programming (filter)
-  return Array.from(this.content).filter(character=>character.match(/[a-zA-Z]/i)).join("")
+  // return Array.from(this.content).filter(character=>character.match(/[a-zA-Z]/i)).join("")
+
+
+  // another approach using regexes' global g 
+  return (this.content.match(/[a-zA-Z]/gi) || []).join("");
 
   // // Imperative method
   // const RegEx = /[a-zA-Z]/i;
